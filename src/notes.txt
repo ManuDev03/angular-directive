@@ -1,0 +1,11 @@
+// setter
+  set hasView(t:boolean){
+    this.hasView = t
+  }
+// getter
+  get hasView(){
+    return this.hasView
+  }
+//calling setter & getter
+// let s = new UnlessDirective()
+// s.hasView(false)
