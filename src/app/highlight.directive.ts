@@ -7,6 +7,11 @@ export class HighlightDirective {
   @Input()
   appHighlight: string = ''
 
+  @Input()
+  dfcolor:string =''
+
+
+
   constructor(private el: ElementRef) { 
     // el.nativeElement.style.backgroundColor= color
   }
@@ -17,11 +22,11 @@ export class HighlightDirective {
 
   @HostListener('mouseenter')
   onMouseEnter(){
-    this.getHighlightColor(this.appHighlight)
+    this.getHighlightColor(this.appHighlight || this.dfcolor)
   }
   @HostListener('mouseleave')
   onMouseLeave(){
-    this.getHighlightColor("cyan")
+    this.getHighlightColor(null)
   }
 
 

@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directive';
-  color = 'green'
+  color = ''
+  setColor(color:string){
+    this.color = color
+  }
 }
